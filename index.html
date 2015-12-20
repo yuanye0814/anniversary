@@ -1,14 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<p>1st anniversary</p>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Our 1st Anniversary</title>
+    <meta name="author" content="YuanYe" />
+    <meta name="description" content=" to commemorate the 1st anniversary of Duoduo and Daidai's encounter" />
+    <meta name="keywords" content="love,anniversary,personal homepage" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=lato:300,400,700" />
+    <link rel="stylesheet" type="text/css" href="pagePiling.js/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="pagePiling.js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $('#pagepiling').pagepiling({
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4','page5'],
+                sectionColor: [],
+                navigation: {
+                    'position': 'right',
+                    'tooltips':['Page 1','Page 2','Page 3','Page 4','Page5']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink,index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            })
+
+        });
+
+    </script>
+
+    <style>
+
+        /* header texts
+        */
+        h1{
+            font-size: 5em;
+            font-family: arial, helvetica;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* centered texts in each section
+        */
+        .section{
+            text-align: center;
+        }
+
+        /* background cover all the section
+        */
+        #section1{
+            background-size: cover;
+        }
+
+        /*section1 background and styles
+        */
+        #section1{
+            backgroun-imge: url(imag/20130913_171624.jpg);
+        }
+
+	    #section1 h1{
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    margin: 0 auto;
+		    top: 30px;
+		    color: #000;
+            color: rgba(0,0,0,0.3);
+	    }
+
+
+
+        /*section 2
+        */
+        #section2 h1,
+        #section2 p{
+            z-index: 3;
+        }
+        #section2 p{
+            opacity: 0.8;
+        }
+
+        #section2 #colors{
+            right: 60px;
+            bottom: 0;
+            position: absolute;
+            height: 431px;
+            width: 258px;
+            background-image: url(imag/20130913_171624.jpg);
+            background-repeat: no-repeat;
+        }
+
+        /*section 3
+        */
+        #section3 #colors{
+            left: 60px;
+            bottom: 0;
+        }
+        #section3 
+
+
+
+    </style>
+
+
 </head>
 
 <body>
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1"></a></li>
+        <li data-menuanchor="page2"><a href="#page2"></a></li>
+        <li data-menuanchor="page3"><a href="#page3"></a></li>
+        <li data-menuanchor="page4"><a href="#page4"></a></li>
+        <li data-menuanchor="page5"><a href="#page5"></a></li>
+    </ul>
 
-<script>
-	document.write("this is the 1st anniversary web");
-</script>
+    <div id="pagepiling">
+        <div class="pp-section" id="section1">
+            <h1>for our 1st anniversary</h1>
+
+
+        </div>
+        
+        <div class="pp-section" id="section2">
+
+            <img src="imgs/20130913_171624.jpg" alt="img1"/>
+            <h1>One year ago</h1>
+            <p>20141224</p>
+            <br />
+
+        </div>
+
+        <div class="pp-section" id="section3">
+
+        </div>
+
+        <div class="pp-section" id="section4">
+
+        </div>
+
+        <div class="pp-section" id="section5">
+
+        </div>
+
+    </div>
+
+<p>this is the 1st anniversary site</p>
 
 
 </body>
