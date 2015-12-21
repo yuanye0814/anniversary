@@ -22,16 +22,16 @@
     
     <script type="text/javascript" src="pagePiling.js/jquery.pagepiling.min.js"></script>
     <script type="text/javascript">
+        var deleteLog = false;
+
         $(document).ready(function () {
-
-
             $('#pagepiling').pagepiling({
                 menu: '#menu',
-                anchors: ['page1', 'page2', 'page3', 'page4','page5'],
-                sectionColor: [],
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                sectionsColor: ['#5F308C', '#2ebe21', '#bfda00', '#2C3E50', '#51bec4', '#ffc0cb'],
                 navigation: {
                     'position': 'right',
-                    'tooltips':['Page 1','Page 2','Page 3','Page 4','Page5']
+                    'tooltips':['Page 1','Page 2','Page 3','Page 4','Page 5','Page 6']
                 },
                 afterRender: function () {
                     $('#pp-nav').addClass('custom');
@@ -41,6 +41,11 @@
                         $('#pp-nav').removeClass('custom');
                     } else {
                         $('#pp-nav').addClass('custom');
+                    }
+
+                    //section 2
+                    if (index == 2) {
+
                     }
                 }
             })
@@ -73,11 +78,7 @@
             background-size: cover;
         }
 
-        /*section1 background and styles
-        */
-        #section1{
-            backgroun-imge: url(imag/20130913_171624.jpg);
-        }
+
 
 	    #section1 h1{
 		    position: absolute;
@@ -101,24 +102,40 @@
             opacity: 0.8;
         }
 
-        #section2 #colors{
-            right: 60px;
-            bottom: 0;
-            position: absolute;
-            height: 431px;
-            width: 258px;
-            background-image: url(imag/20130913_171624.jpg);
-            background-repeat: no-repeat;
+
+        #svg-div{
+            width: 100px;
+            margin: auto auto;
+            padding: 0;
+        }
+        #heart-svg{
+            width: 100px;
+            margin: auto auto;
+            padding: 0;
         }
 
-        /*section 3
-        */
-        #section3 #colors{
-            left: 60px;
-            bottom: 0;
+        
+        .warpper1 {
+            width:960px;
+            margin:0 auto; 
+            padding: 0;
+        
         }
-        #section3 
+        .img1 {
+            width:960px; 
+            margin:0 auto;
 
+        }
+
+        .warpper2 {
+            width:480px;
+            margin:0 auto;
+             height:auto;
+        }
+        .img2 {
+            width:480px; 
+            margin:0 auto;
+        }
 
 
     </style>
@@ -133,39 +150,99 @@
         <li data-menuanchor="page3"><a href="#page3"></a></li>
         <li data-menuanchor="page4"><a href="#page4"></a></li>
         <li data-menuanchor="page5"><a href="#page5"></a></li>
+        <li data-menuanchor="page6"><a href="#page6"></a></li>
     </ul>
 
     <div id="pagepiling">
+
+        //section1
         <div class="pp-section" id="section1">
             <h1>for our 1st anniversary</h1>
+            <div id="svg-div">
+                <svg id="heart-svg" version="1.1" baseProfile="full" viewBox="00 1088 1088" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                        <path id="heart-left" d="M 0 0 L 100 100 A 128 128 0 0 0 128 1024  z ">
+
+                        </path>
+
+                        <path id="heart-left" d="">
+
+                        </path>
+
+                        <path id="cross" d="">
+
+                        </path>
+
+                    </g>
+                </svg>
+            </div>
 
 
         </div>
         
+        //section2
         <div class="pp-section" id="section2">
-
-            <img src="imgs/20130913_171624.jpg" alt="img1"/>
-            <h1>One year ago</h1>
-            <p>20141224</p>
-            <br />
-
+            <div class="intro">
+                <div class="warpper1">
+                    <img class="img1"src="imgs/station.jpg" alt="station" />
+                </div>
+                <h1>We met at Dali realwaystation</h1>
+                <h1>20141224</h1>
+            </div>
         </div>
 
+        //section3
         <div class="pp-section" id="section3">
+            <div class="intro">
+                <div class="warpper1">
+                    <img class="img1" src="imgs/sunset.jpg" alt="sunset" />
+                </div>
+                <h1>Lijiang town's night sight</h1>
+                <h1>Sunset</h1>
+            </div>
 
         </div>
 
+        //section4
         <div class="pp-section" id="section4">
-
+            <div class="intro">
+                <div class="warpper1">
+                    <img class="img1" width="960px" src="imgs/icemountain.jpg" alt="icemountain" />
+                </div>
+                <h1>Baisha</h1>
+                <h1>Mountain</h1>
+            </div>
         </div>
 
+        //section5
         <div class="pp-section" id="section5">
+            <div class="intro">
+                <div class="warpper1">
+                    <img class="img1" src="imgs/lunch.jpg" alt="lunch" />
+                </div>
+                <h1>lunch</h1>
+                <h1></h1>
 
+            </div>
+        </div>
+
+        //section6
+        <div class="pp-section" id="section6">
+            <div class="intro">
+                <div class="warpper2">
+                    <img class="img2" src="imgs/lovewall.jpg" alt="lovewall" />
+                </div>
+                <h1>Conclusion</h1>
+                <h1>picture wall</h1>
+                <div id="information">
+                    <p>contact information6</p>
+                </div>
+            </div>
         </div>
 
     </div>
 
-<p>this is the 1st anniversary site</p>
+
 
 
 </body>
