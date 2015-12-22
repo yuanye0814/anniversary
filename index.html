@@ -21,8 +21,18 @@
     <script src="http://ajax.useso.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     
     <script type="text/javascript" src="pagePiling.js/jquery.pagepiling.min.js"></script>
-    <script type="text/javascript">
-        var deleteLog = false;
+    
+    <script type="text/javascript">   
+
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2fec69a9b1eab87bd36d56366b70dcdd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+		
+		var deleteLog = false;
 
         $(document).ready(function () {
             $('#pagepiling').pagepiling({
@@ -165,7 +175,7 @@
 
                         </path>
 
-                        <path id="heart-left" d="">
+                        <path id="heart-right" d="">
 
                         </path>
 
@@ -207,7 +217,7 @@
         <div class="pp-section" id="section4">
             <div class="intro">
                 <div class="warpper1">
-                    <img class="img1" width="960px" src="imgs/icemountain.jpg" alt="icemountain" />
+                    <img class="img1" src="imgs/icemountain.jpg" alt="icemountain" />
                 </div>
                 <h1>Baisha</h1>
                 <h1>Mountain</h1>
