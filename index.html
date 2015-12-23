@@ -16,66 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
 
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-    <!--repaced with 360lib-->
-    <script src="http://ajax.useso.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
-    <script type="text/javascript" src="pagePiling.js/jquery.pagepiling.min.js"></script>
-    
-    <script type="text/javascript">   
 
-        var _hmt = _hmt || [];
-       (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?2fec69a9b1eab87bd36d56366b70dcdd";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-		
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-71664849-2', 'auto');
-        ga('send', 'pageview'); 
-
-
-        //var _gaq = _gaq || [];
-        //// test if supports svg
-        //var isSvgSupported = document.implementation.hasFeature(
-        //    'http://www.w3.org/TR/SVG11/feature#Image', '1.1');
-        //_gaq.push(['_trackEvent', 'Support', "Svg", isSvgSupported]);
-
-
-
-		var deleteLog = false;
-
-        $(document).ready(function () {
-            $('#pagepiling').pagepiling({
-                menu: '#menu',
-                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-                sectionsColor: ['#5F308C', '#2ebe21', '#bfda00', '#2C3E50', '#51bec4', '#ffc0cb'],
-                navigation: {
-                    'position': 'right',
-                    'tooltips':['Page 1','Page 2','Page 3','Page 4','Page 5','Page 6']
-                },
-                afterRender: function () {
-                    $('#pp-nav').addClass('custom');
-                },
-                afterLoad: function (anchorLink,index) {
-                    if (index > 1) {
-                        $('#pp-nav').removeClass('custom');
-                    } else {
-                        $('#pp-nav').addClass('custom');
-                    }
-
-                }
-            })
-
-        });
-
-    </script>
 
     <style>
 
@@ -500,7 +441,68 @@
         </div>
 
     </div>
+    
+    
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <!--repaced with 360lib-->
+    <script src="http://ajax.useso.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="pagePiling.js/jquery.pagepiling.min.js"></script>
+    
+    <script type="text/javascript">   
 
+        var _hmt = _hmt || [];
+       (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?2fec69a9b1eab87bd36d56366b70dcdd";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+		
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71664849-2', 'auto');
+        ga('send', 'pageview'); 
+
+
+        //var _gaq = _gaq || [];
+        //// test if supports svg
+        //var isSvgSupported = document.implementation.hasFeature(
+        //    'http://www.w3.org/TR/SVG11/feature#Image', '1.1');
+        //_gaq.push(['_trackEvent', 'Support', "Svg", isSvgSupported]);
+
+
+
+		var deleteLog = false;
+
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+                sectionsColor: ['#5F308C', '#2ebe21', '#bfda00', '#2C3E50', '#51bec4', '#ffc0cb'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips':['Page 1','Page 2','Page 3','Page 4','Page 5','Page 6']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink,index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+
+                }
+            })
+
+        });
+
+    </script>
 </body>
 
 </html>
